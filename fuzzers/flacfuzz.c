@@ -106,7 +106,7 @@ static char *strdup_or_die_(const char *s)
 	return x;
 }
 
-int fuzzme() { // char *jpegFile;
+int fuzzme(char *jpegFile) {
 	FLAC__bool ok = true;
 	FLAC__StreamEncoder *encoder = 0;
 	FLAC__StreamEncoderInitStatus init_status;
@@ -203,7 +203,7 @@ int fuzzme() { // char *jpegFile;
 		metadata[1]->data.picture.colors = 0;
 		
 		// Read data from file seed
-		FILE *f = fopen("sampleImg.jpeg", "rb");
+		FILE *f = fopen(jpegFile, "rb");
 		char *buf;
 		if (!f) {
 			fprintf(stderr, "PICTURE-ERROR: Cant fopen() jpeg file\n");
@@ -326,10 +326,6 @@ int fuzzme() { // char *jpegFile;
 
 int main(int argc, char *argv[])
 {
-	// if(argc != 3) {
-	// 	fprintf(stderr, "usage: %s infile.wav outfile.flac\n", argv[0]);
-	// 	return 1;
-	// }
-	fuzzme();
+	fuzzme(argv[1]);
 	return 0;
 }
