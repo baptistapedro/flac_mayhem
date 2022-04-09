@@ -28,8 +28,6 @@ RUN wget https://download.samplelib.com/jpeg/sample-clouds-400x300.jpg && mv sam
 #RUN mv sampleWav.wav /in
 RUN mv sampleImg.jpeg /in
 
-RUN echo core >/proc/sys/kernel/core_pattern
-
 # fuzz
 ENTRYPOINT ["afl-fuzz", "-i", "/in", "-o", "/out"]
 CMD ["/flac_fuzz", "@@"]
