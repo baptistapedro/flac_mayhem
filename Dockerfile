@@ -20,7 +20,6 @@ RUN make install
 # Setup harness
 COPY ./fuzzers/flacfuzz.c .
 COPY ./include/share/compat.h .
-COPY ./include/share/compat.h /
 RUN afl-clang -I/usr/local/include -lFLAC -fno-inline flacfuzz.c -o /flac_fuzz
 
 RUN mkdir -p /in
