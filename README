@@ -1,7 +1,7 @@
 
 Fuzzing with ForAllSecure Mayhem
 
-Adding new fuzzer harness targeting the cover art rendering
+Adding new fuzzer harness targeting the cover art rendering/decoder
 Attack surface not yet covered by OSS-Fuzz.
 
 This harness was written as an attempt to hunt bugs directly on Telegram by fuzzing libFLAC.
