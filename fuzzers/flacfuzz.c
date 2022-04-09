@@ -1,4 +1,4 @@
-
+// Pedro Baptista 
 #ifdef HAVE_CONFIG_H
 #  include <config.h>
 #endif
@@ -8,9 +8,6 @@
 #include <string.h>
 #include <inttypes.h>
 #include <unistd.h>
-//#include <string>
-
-
 
 #include "compat.h"
 #include "FLAC/metadata.h"
