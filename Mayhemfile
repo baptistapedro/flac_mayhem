@@ -1,0 +1,7 @@
+image: pedbap/flac_mayhem:latest
+duration: 90
+project: flac_mayhem
+target: flac_mayhem
+cmds:
+  - cmd: /flac_fuzz @@
+    afl: true
